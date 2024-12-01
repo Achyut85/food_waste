@@ -10,6 +10,7 @@ const Inventories = () => {
     const [option , setOption] = useState(" ");
     const [totalValue, setTotalValue] = useState(0);
     const [isUploadExcel , setIsUploadExcel] = useState(false)
+    const [numberOfItem ,  setNumberItem] = useState(0)
   return (
     <div className="h-full  flex flex-col w-full  ">
            {
@@ -42,7 +43,7 @@ const Inventories = () => {
             <div className="flex items-center gap-5 py-8">
                 <div className="flex flex-col gap-1 justify-center pr-12 border-r border-gray-300">
                     <span className="text-gray-500 text-sm">PRODUCTS</span>
-                    <span  className="text-2xl font-semibold">56</span>
+                    <span  className="text-2xl font-semibold">{numberOfItem}</span>
                 </div>
 
                 <div className="flex flex-col gap-1 justify-center pr-12 border-r border-gray-300 max-sm:pr-8">
@@ -75,6 +76,7 @@ const Inventories = () => {
         </div> 
         <InentoriesTable
             setTotalValue = {setTotalValue}
+            setNumberItem = {setNumberItem}
         />
         </div>
         

@@ -9,6 +9,7 @@ import TransactionHistory from "./components/TransactionHistory";
 import UserProfile from "./components/UserProfile";
 import FoodMenu from "./components/FoodMenu";
 import refreshAccessToken from "./components/RefreshHandler";
+import Inventories from "./components/Inventories";
 
 
 
@@ -53,7 +54,7 @@ const App = () => {
             </PrivateRoute>
           }
         />
-
+          
           <Route
           path="/user-profile"
           element={
@@ -62,7 +63,14 @@ const App = () => {
             </PrivateRoute>
           }
         />
-
+        {/* <Route
+          path="/user"
+          element={
+            <PrivateRoute>
+              <Inventories/>
+            </PrivateRoute>
+          }
+        /> */}
       </Routes>
 
       
