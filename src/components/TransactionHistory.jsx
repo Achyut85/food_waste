@@ -1,6 +1,6 @@
 import React from "react";
 
-const TransactionHistory = () => {
+const TransactionHistory = ({setProfile}) => {
   const transactions = [
     {
       id: "TXN123456789",

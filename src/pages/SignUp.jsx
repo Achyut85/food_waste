@@ -1,10 +1,10 @@
-// components/Signup.js
-import React from "react";
+// components/Signup.jsimport { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Signup = ({ onSignup }) => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="w-full max-w-md bg-white p-8 rounded shadow-md">
+    <div className="min-h-screen flex items-center justify-center bg-green-300 h-screen">
+      <div className="w-full max-w-md bg-white p-8 rounded shadow-md h-full">
         <h2 className="text-2xl font-bold text-center text-green-700 mb-6">Signup</h2>
         <form>
           <div className="mb-4">
@@ -38,7 +38,15 @@ const Signup = ({ onSignup }) => {
           >
             Signup
           </button>
+
         </form>
+
+        <p className="mt-4 text-sm text-center text-gray-600">
+          Already have an account?{" "}
+          <Link to="/signin" className="text-green-600 hover:underline">
+            Signin
+          </Link>
+        </p>
       </div>
     </div>
   );

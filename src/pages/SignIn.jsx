@@ -45,9 +45,9 @@ const SignIn = ({setIsAuthenticated}) => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="bg-white p-6 rounded-lg shadow-lg max-w-md w-full">
-        <h2 className="text-2xl font-bold text-green-700 mb-4">Login</h2>
+    <div className="min-h-screen flex items-center justify-center bg-green-300 h-screen">
+      <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full h-full mt-2">
+        <h2 className="text-2xl font-bold text-green-700 mb-4 ">Login</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label htmlFor="email" className="block text-gray-700 font-medium">Email</label>
@@ -87,6 +87,7 @@ const SignIn = ({setIsAuthenticated}) => {
           </Link>
         </p>
       </div>
+    
     </div>
   );
 };

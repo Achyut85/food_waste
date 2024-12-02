@@ -1,12 +1,16 @@
 import React from "react";
 import { BackIcon } from "../assets/icons";
-const UserProfile = () => {
+const UserProfile = ({setProfile}) => {
   return (
     <div className="flex flex-wrap gap-5 justify-center p-5  bg-gray-100 h-screen ">
         
         
       <div className="w-full max-w-sm bg-white rounded-lg shadow-lg overflow-hidden md:max-w-md lg:max-w-lg relative">
-      <p className="absolute left-0 p-4" role="button"><BackIcon/></p>
+      <p className="absolute left-0 p-4" role="button"
+        onClick={() => {
+          setProfile("user")
+        }}
+      ><BackIcon/></p>
         <header className="text-center p-5 bg-green-50">
           <img
             src="https://via.placeholder.com/100"
@@ -36,15 +40,15 @@ const UserProfile = () => {
           </ul>
         </section>
         <nav className="flex flex-col p-5 bg-gray-50">
-        <a href="txn.html" className="text-green-600 mb-3 hover:underline">
+        <span className="text-green-600 mb-3 hover:underline">
             Recent Orders
-          </a>
-          <a href="txn.html" className="text-green-600 mb-3 hover:underline">
+          </span>
+          <span className="text-green-600 mb-3 hover:underline">
             Payment History
-          </a>
-          <a href="#" className="text-green-600 hover:underline">
+          </span>
+          <span  className="text-green-600 hover:underline">
             Order Now
-          </a>
+          </span>
 
           <p role="button">Logout</p>
         </nav>

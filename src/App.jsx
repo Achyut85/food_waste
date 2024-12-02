@@ -10,6 +10,8 @@ import UserProfile from "./components/UserProfile";
 import FoodMenu from "./components/FoodMenu";
 import refreshAccessToken from "./components/RefreshHandler";
 import Inventories from "./components/Inventories";
+import LandingPage from "./pages/LandingPage";
+
 
 
 
@@ -39,21 +41,22 @@ const App = () => {
 
       <Routes>
         {/* Redirect root to the sign-in page */}
-        <Route path="/" element={<Navigate to="/signin" />} />
+        <Route path="/" element={<Navigate to="/home" />} />
 
         {/* Public routes */}
         <Route path="/signin" element={<SignIn setIsAuthenticated = {setIsAuthenticated}/>} />
         <Route path="/signup" element={<Signup/>} />
+        <Route path="/home" element={<LandingPage/>} />
 
         {/* Private routes */}
-        <Route
+        {/* <Route
           path="/user"
           element={
             <PrivateRoute>
               <UserApp />
             </PrivateRoute>
           }
-        />
+        /> */}
           
           <Route
           path="/user-profile"
@@ -63,14 +66,14 @@ const App = () => {
             </PrivateRoute>
           }
         />
-        {/* <Route
+        <Route
           path="/user"
           element={
             <PrivateRoute>
               <Inventories/>
             </PrivateRoute>
           }
-        /> */}
+        />
       </Routes>
 
       

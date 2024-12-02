@@ -77,6 +77,7 @@ const Inventories = () => {
         <InentoriesTable
             setTotalValue = {setTotalValue}
             setNumberItem = {setNumberItem}
+            option = {option}
         />
         </div>
         

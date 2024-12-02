@@ -18,6 +18,7 @@ const ExcelUploade = ({closeUpload}) => {
   });
 
   const handleUpload = async () => {
+    const token = localStorage.getItem('token')
     if (!file) {
       setUploadStatus("Please select a file first.");
       return;
@@ -30,7 +31,7 @@ const ExcelUploade = ({closeUpload}) => {
       const response = await axios.post("http://192.168.43.221:8000/api/v1/stock/save-excel-data/", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
-          'Authorization': `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzMzMDIzMjg0LCJpYXQiOjE3MzMwMjAyODQsImp0aSI6Ijk5NTJiNzI5M2QzNjRmZDI5MGI1ZGIzMDgxMTcyMzVjIiwidXNlcl9pZCI6MX0.kS-yz7kD5Ivk24eF2IAj1pAQhbnBaxGBgYc82i8NGEg`
+          'Authorization': `Bearer ${token}`
 
         },
       });
